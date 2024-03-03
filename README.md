@@ -44,9 +44,9 @@
 
 #### p6df-playwright/init.zsh:
 
-- p6df::modules::cucumber::deps()
-- p6df::modules::cucumber::langs()
-- p6df::modules::cucumber::vscodes()
+- p6df::modules::playwright::deps()
+- p6df::modules::playwright::langs()
+- p6df::modules::playwright::vscodes()
 
 
 
