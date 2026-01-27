@@ -22,7 +22,28 @@ p6df::modules::playwright::deps() {
 ######################################################################
 p6df::modules::playwright::vscodes() {
 
-  code --install-extension ms-playwright.playwright
+  p6df::modules::vscode::extension::install ms-playwright.playwright
+
+  p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: str json = p6df::modules::playwright::vscodes::config()
+#
+#  Returns:
+#	str - json
+#
+#>
+######################################################################
+p6df::modules::playwright::vscodes::config() {
+
+  cat <<'EOF'
+  "playwright.env": {
+    "DEBUG": "pw:api"
+  }
+EOF
 
   p6_return_void
 }
