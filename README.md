@@ -38,6 +38,7 @@ TODO: Add a short summary of this module.
 - `p6df::modules::playwright::deps()`
 - `p6df::modules::playwright::langs()`
 - `p6df::modules::playwright::vscodes()`
+- `p6df::modules::playwright::vscodes::config()`
 
 ## Hierarchy
 
