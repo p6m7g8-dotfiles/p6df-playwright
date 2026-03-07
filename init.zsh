@@ -57,3 +57,17 @@ p6df::modules::playwright::langs() {
 
   p6_return_void
 }
+
+######################################################################
+#<
+#
+# Function: p6df::modules::playwright::mcp()
+#
+#>
+######################################################################
+p6df::modules::playwright::mcp() {
+
+  p6_js_npm_global_install "@playwright/mcp"
+
+  p6_return_void
+}

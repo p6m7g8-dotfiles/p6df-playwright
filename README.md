@@ -17,7 +17,8 @@
 
 ## Summary
 
-TODO: Add a short summary of this module.
+p6df module for Playwright: browser automation testing with VSCode integration
+and MCP server (`@playwright/mcp`) for AI-driven browser control.
 
 ## Contributing
 
@@ -37,6 +38,7 @@ TODO: Add a short summary of this module.
 
 - `p6df::modules::playwright::deps()`
 - `p6df::modules::playwright::langs()`
+- `p6df::modules::playwright::mcp()`
 - `p6df::modules::playwright::vscodes()`
 - `p6df::modules::playwright::vscodes::config()`
 
