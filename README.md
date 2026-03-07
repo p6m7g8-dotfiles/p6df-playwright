@@ -17,8 +17,9 @@
 
 ## Summary
 
-p6df module for Playwright: browser automation testing with VSCode integration
-and MCP server (`@playwright/mcp`) for AI-driven browser control.
+p6df module for Playwright: browser testing framework, `@playwright/test` npm
+install, and MCP server (`playwright-mcp` via brew) for AI-driven browser
+automation and testing.
 
 ## Contributing
 
