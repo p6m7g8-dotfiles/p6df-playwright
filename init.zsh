@@ -67,7 +67,7 @@ p6df::modules::playwright::langs() {
 ######################################################################
 p6df::modules::playwright::mcp() {
 
-  p6df::core::homebrew::cli::brew::install playwright-mcp
+  p6_js_npm_global_install "@playwright/mcp"
 
   p6_return_void
 }
