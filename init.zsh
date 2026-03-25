@@ -16,6 +16,21 @@ p6df::modules::playwright::deps() {
 ######################################################################
 #<
 #
+# Function: p6df::modules::playwright::home::symlinks()
+#
+#  Environment:	 HOME P6_DFZ_SRC_DIR
+#>
+######################################################################
+p6df::modules::playwright::home::symlinks() {
+
+  p6_file_symlink "$P6_DFZ_SRC_DIR/lackeyjb/playwright-skill/skills/playwright-skill"                                        "$HOME/.claude/skills/playwright"
+
+  p6_return_void
+}
+
+######################################################################
+#<
+#
 # Function: p6df::modules::playwright::vscodes()
 #
 #>
