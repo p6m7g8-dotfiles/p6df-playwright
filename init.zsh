@@ -85,5 +85,8 @@ p6df::modules::playwright::mcp() {
 
   p6_js_npm_global_install "@playwright/mcp"
 
+  p6df::modules::anthropic::mcp::server::add "playwright" "npx" "-y" "@playwright/mcp"
+  p6df::modules::openai::mcp::server::add "playwright" "npx" "-y" "@playwright/mcp"
+
   p6_return_void
 }
