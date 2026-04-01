@@ -104,5 +104,5 @@ p6df::modules::playwright::mcp() {
 ######################################################################
 p6df::modules::playwright::profile::mod() {
 
-  p6_return_words 'playwright' '$PLAYWRIGHT_BROWSERS_PATH'
+  p6_return_words 'playwright' "$"
 }
