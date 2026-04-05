@@ -31,6 +31,36 @@ p6df::modules::playwright::home::symlinks() {
 ######################################################################
 #<
 #
+# Function: p6df::modules::playwright::langs()
+#
+#>
+######################################################################
+p6df::modules::playwright::langs() {
+
+  p6_js_npm_global_install "@playwright/test"
+
+  p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::playwright::mcp()
+#
+#>
+######################################################################
+p6df::modules::playwright::mcp() {
+
+  p6_js_npm_global_install "@playwright/mcp"
+
+  p6df::modules::anthropic::mcp::server::add "playwright" "npx" "-y" "@playwright/mcp"
+  p6df::modules::openai::mcp::server::add "playwright" "npx" "-y" "@playwright/mcp"
+
+  p6_return_void
+}
+######################################################################
+#<
+#
 # Function: p6df::modules::playwright::vscodes()
 #
 #>
@@ -60,33 +90,3 @@ EOF
   p6_return_void
 }
 
-######################################################################
-#<
-#
-# Function: p6df::modules::playwright::langs()
-#
-#>
-######################################################################
-p6df::modules::playwright::langs() {
-
-  p6_js_npm_global_install "@playwright/test"
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::playwright::mcp()
-#
-#>
-######################################################################
-p6df::modules::playwright::mcp() {
-
-  p6_js_npm_global_install "@playwright/mcp"
-
-  p6df::modules::anthropic::mcp::server::add "playwright" "npx" "-y" "@playwright/mcp"
-  p6df::modules::openai::mcp::server::add "playwright" "npx" "-y" "@playwright/mcp"
-
-  p6_return_void
-}
