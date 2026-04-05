@@ -1,11 +1,5 @@
 # shellcheck shell=bash
 ######################################################################
-#<
-#
-# Function: p6df::modules::playwright::deps()
-#
-#>
-######################################################################
 p6df::modules::playwright::deps() {
   ModuleDeps=(
     p6m7g8-dotfiles/p6df-js
@@ -13,13 +7,6 @@ p6df::modules::playwright::deps() {
   )
 }
 
-######################################################################
-#<
-#
-# Function: p6df::modules::playwright::home::symlinks()
-#
-#  Environment:	 HOME P6_DFZ_SRC_DIR
-#>
 ######################################################################
 p6df::modules::playwright::home::symlinks() {
 
@@ -29,11 +16,23 @@ p6df::modules::playwright::home::symlinks() {
 }
 
 ######################################################################
-#<
-#
-# Function: p6df::modules::playwright::vscodes()
-#
-#>
+p6df::modules::playwright::langs() {
+
+  p6_js_npm_global_install "@playwright/test"
+
+  p6_return_void
+}
+
+######################################################################
+p6df::modules::playwright::mcp() {
+
+  p6_js_npm_global_install "@playwright/mcp"
+
+  p6df::modules::anthropic::mcp::server::add "playwright" "npx" "-y" "@playwright/mcp"
+  p6df::modules::openai::mcp::server::add "playwright" "npx" "-y" "@playwright/mcp"
+
+  p6_return_void
+}
 ######################################################################
 p6df::modules::playwright::vscodes() {
 
@@ -42,12 +41,6 @@ p6df::modules::playwright::vscodes() {
   p6_return_void
 }
 
-######################################################################
-#<
-#
-# Function: p6df::modules::playwright::vscodes::config()
-#
-#>
 ######################################################################
 p6df::modules::playwright::vscodes::config() {
 
@@ -63,30 +56,37 @@ EOF
 ######################################################################
 #<
 #
-# Function: p6df::modules::playwright::langs()
+# Function: p6df::modules::playwright::deps()
 #
 #>
 ######################################################################
-p6df::modules::playwright::langs() {
-
-  p6_js_npm_global_install "@playwright/test"
-
-  p6_return_void
-}
-
+#<
+#
+# Function: p6df::modules::playwright::home::symlinks()
+#
+#  Environment:	 HOME P6_DFZ_SRC_DIR
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::playwright::vscodes()
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::playwright::vscodes::config()
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::playwright::langs()
+#
+#>
 ######################################################################
 #<
 #
 # Function: p6df::modules::playwright::mcp()
 #
 #>
-######################################################################
-p6df::modules::playwright::mcp() {
-
-  p6_js_npm_global_install "@playwright/mcp"
-
-  p6df::modules::anthropic::mcp::server::add "playwright" "npx" "-y" "@playwright/mcp"
-  p6df::modules::openai::mcp::server::add "playwright" "npx" "-y" "@playwright/mcp"
-
-  p6_return_void
-}
