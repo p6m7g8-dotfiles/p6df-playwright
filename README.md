@@ -17,8 +17,7 @@
 
 ## Summary
 
-p6df module for Playwright: browser automation CLI tools and MCP server
-(`@playwright/mcp` via npm) for AI-driven browser testing and automation.
+TODO: Add a short summary of this module.
 
 ## Contributing
 
@@ -37,6 +36,7 @@ p6df module for Playwright: browser automation CLI tools and MCP server
 ##### p6df-playwright/init.zsh
 
 - `p6df::modules::playwright::deps()`
+- `p6df::modules::playwright::home::symlinks()`
 - `p6df::modules::playwright::langs()`
 - `p6df::modules::playwright::mcp()`
 - `p6df::modules::playwright::vscodes()`
